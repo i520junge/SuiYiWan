@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="JGFootRefreshView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上拉加载更多" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKp-0I-f1F">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VDA-in-ehI">
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="cPU-OJ-tBa"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正在加载更多数据。。。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WlJ-93-pXk">
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="cPU-OJ-tBa" firstAttribute="centerY" secondItem="VDA-in-ehI" secondAttribute="centerY" id="OMn-UF-cRb"/>
+                        <constraint firstItem="WlJ-93-pXk" firstAttribute="centerY" secondItem="VDA-in-ehI" secondAttribute="centerY" id="PaY-lu-qJW"/>
+                        <constraint firstItem="WlJ-93-pXk" firstAttribute="centerX" secondItem="VDA-in-ehI" secondAttribute="centerX" id="SQY-tC-eKm"/>
+                        <constraint firstItem="WlJ-93-pXk" firstAttribute="leading" secondItem="cPU-OJ-tBa" secondAttribute="trailing" constant="30" id="wrp-A9-MkQ"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="up" translatesAutoresizingMaskIntoConstraints="NO" id="KeO-Ib-5kW">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="18" id="rrN-pj-Bxz"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.40242443249999998" green="0.80881029689999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="KeO-Ib-5kW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="3vY-zB-X78"/>
+                <constraint firstAttribute="bottom" secondItem="KeO-Ib-5kW" secondAttribute="bottom" constant="5" id="L2r-Xj-0Ur"/>
+                <constraint firstItem="gKp-0I-f1F" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="OJp-lG-G06"/>
+                <constraint firstAttribute="bottom" secondItem="VDA-in-ehI" secondAttribute="bottom" id="Ped-Rd-dLD"/>
+                <constraint firstItem="VDA-in-ehI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="UCe-ah-3gn"/>
+                <constraint firstAttribute="trailing" secondItem="VDA-in-ehI" secondAttribute="trailing" id="d0d-7B-7Q0"/>
+                <constraint firstItem="gKp-0I-f1F" firstAttribute="leading" secondItem="KeO-Ib-5kW" secondAttribute="trailing" constant="30" id="dQx-QW-RaD"/>
+                <constraint firstItem="VDA-in-ehI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="f3J-sa-Jom"/>
+                <constraint firstItem="gKp-0I-f1F" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vbI-pr-hCl"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="refreshView" destination="VDA-in-ehI" id="eu5-B7-2Or"/>
+                <outlet property="upImageView" destination="KeO-Ib-5kW" id="tT8-Zr-pKj"/>
+                <outlet property="upLabel" destination="gKp-0I-f1F" id="12J-a7-Fe5"/>
+            </connections>
+            <point key="canvasLocation" x="-254" y="-221"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="up" width="30" height="51"/>
+    </resources>
+</document>

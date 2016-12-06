@@ -1,0 +1,49 @@
+//
+//  SuiYiWan.pch
+//  SuiYiWan
+//
+//  Created by 刘军 on 16/10/16.
+//  Copyright © 2016年 JunGe. All rights reserved.
+//
+
+#import "UIView+Frame.h"
+#import "UIBarButtonItem+Item.h"
+
+// 弱引用
+#define JGWeakSelf __weak typeof(self) weakSelf = self;
+
+/*** 颜色 ***/
+#define JGColorA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
+#define JGColor(r, g, b) JGColorA((r), (g), (b), 255)
+#define JGRandomColor JGColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+#define JGrayColor(v) JGColor((v), (v), (v))
+#define JGCommonBgColor JGrayColor(206)
+
+//屏幕适配
+#define JGScreenH [UIScreen mainScreen].bounds.size.height
+#define JGScreenW [UIScreen mainScreen].bounds.size.width
+
+#define iPhone6P (JGScreenH == 736)
+#define iPhone6 (JGScreenH == 667)
+#define iPhone5 (JGScreenH == 568)
+#define iPhone4 (JGScreenH == 480)
+
+//版本号
+#define JGSystemVersion [[UIDevice currentDevice].systemVersion floatValue]
+
+//网络
+#define JGBaseURL @"http://api.budejie.com/api/api_open.php"
+
+//cache存储路径
+#define KcachePath [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
+
+//调试阶段
+#ifdef DEBUG
+#define JGLog(...) NSLog(__VA_ARGS__)
+//发布阶段
+#else
+#define JGLog(...)
+
+#endif
+
+

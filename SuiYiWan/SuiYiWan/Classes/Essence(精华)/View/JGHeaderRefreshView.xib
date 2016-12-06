@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="der-pT-Mq8" customClass="JGHeaderRefreshView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NWI-IK-fo2">
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mqm-dq-sSo"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正在刷新更多数据。。。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjS-9V-tfg">
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="yjS-9V-tfg" firstAttribute="leading" secondItem="mqm-dq-sSo" secondAttribute="trailing" constant="30" id="5cB-sV-GLa"/>
+                        <constraint firstItem="yjS-9V-tfg" firstAttribute="centerY" secondItem="NWI-IK-fo2" secondAttribute="centerY" id="LpN-sT-ohh"/>
+                        <constraint firstItem="yjS-9V-tfg" firstAttribute="centerX" secondItem="NWI-IK-fo2" secondAttribute="centerX" id="YZ3-Nr-QM6"/>
+                        <constraint firstItem="mqm-dq-sSo" firstAttribute="centerY" secondItem="NWI-IK-fo2" secondAttribute="centerY" id="m9E-vf-rV9"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下拉可以刷新" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITQ-BA-UM1">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down" translatesAutoresizingMaskIntoConstraints="NO" id="OJZ-9P-1QX">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="18" id="y7f-eP-I8p"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.40242443249999998" green="0.80881029689999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="OJZ-9P-1QX" secondAttribute="bottom" constant="5" id="78E-wS-F6X"/>
+                <constraint firstAttribute="trailing" secondItem="NWI-IK-fo2" secondAttribute="trailing" id="9n8-Tv-xYM"/>
+                <constraint firstAttribute="bottom" secondItem="NWI-IK-fo2" secondAttribute="bottom" id="CIp-3v-1h9"/>
+                <constraint firstItem="ITQ-BA-UM1" firstAttribute="centerY" secondItem="der-pT-Mq8" secondAttribute="centerY" id="CZI-PF-gcz"/>
+                <constraint firstItem="NWI-IK-fo2" firstAttribute="leading" secondItem="der-pT-Mq8" secondAttribute="leading" id="HAc-hp-jK3"/>
+                <constraint firstItem="ITQ-BA-UM1" firstAttribute="centerX" secondItem="der-pT-Mq8" secondAttribute="centerX" id="Kfz-hH-Yhg"/>
+                <constraint firstItem="NWI-IK-fo2" firstAttribute="top" secondItem="der-pT-Mq8" secondAttribute="top" id="hLk-B7-ha1"/>
+                <constraint firstItem="OJZ-9P-1QX" firstAttribute="top" secondItem="der-pT-Mq8" secondAttribute="top" constant="5" id="qvA-Ix-AbY"/>
+                <constraint firstItem="ITQ-BA-UM1" firstAttribute="leading" secondItem="OJZ-9P-1QX" secondAttribute="trailing" constant="30" id="wc5-0Z-b1X"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="downImageView" destination="OJZ-9P-1QX" id="wwj-7a-x8P"/>
+                <outlet property="downLabel" destination="ITQ-BA-UM1" id="9MN-5X-qXM"/>
+                <outlet property="refreshView" destination="NWI-IK-fo2" id="oPH-sC-cZl"/>
+            </connections>
+            <point key="canvasLocation" x="-254" y="-221"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="down" width="30" height="51"/>
+    </resources>
+</document>

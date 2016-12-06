@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="JGBottomView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKq-BG-aZv">
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" image="mainCellDing">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="mainCellDingClick"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvg-Qs-PGQ">
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" image="mainCellCai">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="mainCellCaiClick"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcy-UQ-d3P">
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" image="mainCellComment">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="mainCellCommentClick"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ed3-oy-hgS">
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" image="mainCellShare">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="mainCellShareClick"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="iKq-BG-aZv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0Tv-hn-HeP"/>
+                <constraint firstAttribute="bottom" secondItem="hcy-UQ-d3P" secondAttribute="bottom" id="0kW-z1-2U5"/>
+                <constraint firstItem="hcy-UQ-d3P" firstAttribute="width" secondItem="Ed3-oy-hgS" secondAttribute="width" id="7XI-hf-SNw"/>
+                <constraint firstItem="iKq-BG-aZv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MP8-D6-iQ9"/>
+                <constraint firstItem="hcy-UQ-d3P" firstAttribute="leading" secondItem="Ed3-oy-hgS" secondAttribute="trailing" id="Nm0-ru-maX"/>
+                <constraint firstItem="zvg-Qs-PGQ" firstAttribute="width" secondItem="iKq-BG-aZv" secondAttribute="width" id="Pch-DN-Ofd"/>
+                <constraint firstItem="Ed3-oy-hgS" firstAttribute="leading" secondItem="zvg-Qs-PGQ" secondAttribute="trailing" id="QIb-p9-GE6"/>
+                <constraint firstAttribute="trailing" secondItem="hcy-UQ-d3P" secondAttribute="trailing" id="QTi-ad-Wg8"/>
+                <constraint firstAttribute="bottom" secondItem="iKq-BG-aZv" secondAttribute="bottom" id="Sio-SE-IXr"/>
+                <constraint firstItem="zvg-Qs-PGQ" firstAttribute="leading" secondItem="iKq-BG-aZv" secondAttribute="trailing" id="V4r-Jj-cTL"/>
+                <constraint firstAttribute="bottom" secondItem="zvg-Qs-PGQ" secondAttribute="bottom" id="Xdn-dP-cEs"/>
+                <constraint firstItem="Ed3-oy-hgS" firstAttribute="height" secondItem="zvg-Qs-PGQ" secondAttribute="height" id="Xez-Ge-oNp"/>
+                <constraint firstItem="Ed3-oy-hgS" firstAttribute="width" secondItem="zvg-Qs-PGQ" secondAttribute="width" id="e4B-Tr-I6L"/>
+                <constraint firstAttribute="bottom" secondItem="Ed3-oy-hgS" secondAttribute="bottom" id="pzD-K0-6an"/>
+                <constraint firstItem="hcy-UQ-d3P" firstAttribute="height" secondItem="Ed3-oy-hgS" secondAttribute="height" id="vJE-4s-ozY"/>
+                <constraint firstItem="zvg-Qs-PGQ" firstAttribute="height" secondItem="iKq-BG-aZv" secondAttribute="height" id="ze0-hU-ZD0"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="caiBtn" destination="zvg-Qs-PGQ" id="Nyf-37-peJ"/>
+                <outlet property="commentBtn" destination="hcy-UQ-d3P" id="sOV-GW-5lg"/>
+                <outlet property="dingBtn" destination="iKq-BG-aZv" id="6b6-l7-Sy4"/>
+                <outlet property="shareBtn" destination="Ed3-oy-hgS" id="Cr6-Om-eaF"/>
+            </connections>
+            <point key="canvasLocation" x="112" y="58"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="mainCellCai" width="20" height="20"/>
+        <image name="mainCellCaiClick" width="20" height="20"/>
+        <image name="mainCellComment" width="20" height="20"/>
+        <image name="mainCellCommentClick" width="20" height="20"/>
+        <image name="mainCellDing" width="20" height="20"/>
+        <image name="mainCellDingClick" width="20" height="20"/>
+        <image name="mainCellShare" width="20" height="20"/>
+        <image name="mainCellShareClick" width="23" height="23"/>
+    </resources>
+</document>

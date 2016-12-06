@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JGSeeBigPictureVC">
+            <connections>
+                <outlet property="scrollView" destination="3uG-HD-YoF" id="hcU-yJ-7Qd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3uG-HD-YoF">
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iD5-sx-OeG">
+                    <state key="normal" image="show_image_back_icon"/>
+                    <connections>
+                        <action selector="backClick:" destination="-1" eventType="touchUpInside" id="oo2-Da-Vnn"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="me0-fz-W1j">
+                    <color key="backgroundColor" red="0.69709708121827418" green="0.69709708121827418" blue="0.69709708121827418" alpha="0.30332298801369861" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="CHo-f3-06o"/>
+                    </constraints>
+                    <state key="normal" title="保存">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="saveClick:" destination="-1" eventType="touchUpInside" id="XDH-LS-RrQ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="3uG-HD-YoF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="0gC-0s-dno"/>
+                <constraint firstAttribute="bottom" secondItem="me0-fz-W1j" secondAttribute="bottom" constant="46" id="6fE-sQ-rwf"/>
+                <constraint firstItem="iD5-sx-OeG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="LYf-bA-z48"/>
+                <constraint firstAttribute="trailing" secondItem="3uG-HD-YoF" secondAttribute="trailing" id="Rcd-tW-0R6"/>
+                <constraint firstAttribute="trailing" secondItem="me0-fz-W1j" secondAttribute="trailing" constant="20" id="TQP-kp-SdO"/>
+                <constraint firstItem="iD5-sx-OeG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="dtp-4R-ArQ"/>
+                <constraint firstItem="3uG-HD-YoF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gVi-Hg-LGg"/>
+                <constraint firstAttribute="bottom" secondItem="3uG-HD-YoF" secondAttribute="bottom" id="pCn-5w-1ww"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="show_image_back_icon" width="35" height="35"/>
+    </resources>
+</document>
