@@ -13,5 +13,8 @@
 * 4、给系统的类做了类扩展：日期显示（NSDate+Date），改变输入框占位文字的颜色（UITextField+placeholderColor），裁剪圆形图片（UIImage+Randar），轻松添加导航栏左右按钮（UIBarButtonItem+Item），轻松改变任意控件frame（UIView+Frame）
 * 5、抽了基础控制器，轻松实现搭建多个不等高cell的tableview控制器
 * 6、用MJRefresh框架实现下拉刷新、上拉刷新
+* 7、运用MVVM设计模式 布局精华控制器的代码
 
+  
+  
 ##项目中运用到的具体知识点，请看源码，有详细注释
